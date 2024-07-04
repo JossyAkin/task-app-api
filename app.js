@@ -4,7 +4,7 @@ const app = express();
 const tasks = require('./routes/tasks');
 const connectDB = require('./db/connect');
 require('dotenv').config();
-
+const cors = require('cors')
 
 //middleware
 app.use(cors())
