@@ -9,11 +9,13 @@ const cors = require('cors')
 //middleware
 
 app.use(cors({
-    origin: '*'
+    origin: 'http://127.0.0.1:5500'
 }));
-app.use(express.static('./public'));
 app.use(express.json());
 app.use('/api/v1/tasks', tasks);
+app.use(express.static('./public'));
+
+
 
 const port = 3000;
 
