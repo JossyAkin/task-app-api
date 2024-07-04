@@ -7,9 +7,10 @@ require('dotenv').config();
 const cors = require('cors')
 
 //middleware
+
 app.use(cors({
-    origin:'*'
-}))
+    origin: '*'
+}));
 app.use(express.static('./public'));
 app.use(express.json());
 app.use('/api/v1/tasks', tasks);
